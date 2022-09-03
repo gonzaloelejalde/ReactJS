@@ -42,3 +42,8 @@ ul a{
     margin: 10px;
 }
 
+.cartas{
+    display: flex;
+    flex-direction: row;
+}
+
