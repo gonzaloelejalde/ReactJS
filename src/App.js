@@ -2,7 +2,9 @@ import NavBar from "./components/NavBar";
 import Producto from "./components/Producto"
 import CartWidget from "./components/CartWidget";
 import ItemListContainer from "./components/ItemListContainer";
+
 import "./app/styles.css";
+
 
 const App = () => {
     const mostrarAlerta = () => {
@@ -14,7 +16,10 @@ const App = () => {
             <CartWidget mostrarMensaje={mostrarAlerta} />
             <Producto mostrarMensaje={mostrarAlerta} />
             <ItemListContainer />
+            <div>
+            </div>
         </div>
+        
     )
 
 }
