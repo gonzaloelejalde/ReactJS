@@ -4,7 +4,7 @@ import fotocarrito from "../assets/carrito-de-compras.png"
 const CartWidget = ({mostrarMensaje}) => {
 return (
     <div>
-        <img class="carritofoto" src={fotocarrito} alt="" onClick={mostrarMensaje}/>
+        <img className ="carritofoto" src={fotocarrito} alt="" onClick={mostrarMensaje}/>
         </div>
     )
 }

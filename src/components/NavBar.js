@@ -4,10 +4,10 @@ const NavBar = () => {
     return (
         <div>
             <div>
-            <h1 class = "bienvenidos">Bienvenidos</h1>
-            <img class="logo" src={foto} alt="" />
+            <h1 className = "bienvenidos">Bienvenidos</h1>
+            <img className ="logo" src={foto} alt="" />
             </div>
-            <div class="Navbar">
+            <div className="Navbar">
                 <ul>
                     <li><a href=".">Inicio</a></li>
                 </ul>

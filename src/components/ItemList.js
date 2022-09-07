@@ -6,12 +6,15 @@ import mouse from "../assets/mouse.png"
 const ItemList = () => {
     const [p, setP] = useState([])
     useEffect(() => {
-        getProductos().then((task) => {
-            setP(task) //data
-        })
+        const getInfo = async () => {
+            const items = await getProductos()
+            console.log(items)
+            setP(items)
+        }
+        getInfo()
     }, [])
     return (
-            <div class = "cartas">
+            <div className = "cartas">
             <div className="container">
                 <div className="row">
                     <div className="col-md-4">
@@ -19,7 +22,7 @@ const ItemList = () => {
                             <img src={mouse} alt = ""/>
                             <div className="card-body">
                                 <h4 className="card-title">{p.map(producto => <p>{producto.nombre}</p>)}</h4>
-                                <p className="card-text text-secondary">{p.map (producto => <p>Precio: ${producto.precio}</p>)} </p>
+                                <p className="card-text text-secondary">{p.map(producto => <p>${producto.precio}</p>)}</p>
                                 <ItemCount onAdd = {(contador) => console.log(contador)}/>
                             </div>
                         </div>

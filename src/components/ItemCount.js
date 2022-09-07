@@ -14,13 +14,13 @@ const ItemCount = ({stock = 5, cuentaInicial = 0, onAdd}) => {
     return (
     <div>
         Stock: {stock} 
-        <button onClick = {() => setContador(cuentaInicial)} class = "sumaresta">Resetear</button>
-        <button onClick = {() => setContador(contador - 1)} class = "sumaresta"> - </button>
+        <button onClick = {() => setContador(cuentaInicial)} className = "sumaresta">Resetear</button>
+        <button onClick = {() => setContador(contador - 1)} className = "sumaresta"> - </button>
 
         {contador}
 
-        <button onClick = {() => setContador(contador + 1)} class = "sumaresta"> + </button>
-        <button onClick = {() => onAdd(contador)} class = "sumaresta">Agregar al Carrito</button>
+        <button onClick = {() => setContador(contador + 1)} className = "sumaresta"> + </button>
+        <button onClick = {() => onAdd(contador)} className = "sumaresta">Agregar al Carrito</button>
 
         
     </div>
