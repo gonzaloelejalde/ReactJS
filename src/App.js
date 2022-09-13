@@ -1,34 +1,27 @@
-import { useEffect, useState } from "react";
-import NavBar from "./components/NavBar";
-import Producto from "./components/Producto"
-import CartWidget from "./components/CartWidget";
-import ItemListContainer from "./components/ItemListContainer";
-// import Api from "./components/Api"
-import ItemDetailContainer from "./components/ItemDetailContainer";
-import { getItem } from "./app/Item";
 import "./app/styles.css";
+import  Router  from "./app/Router";
+// import Event from "./components/Event"
+// import Mascara from "./components/Mascara"
+// import Hijo from "./components/Hijo"
 
 
 
 
 const App = () => {
-    const mostrarAlerta = () => {
-        alert("Carrito de compras")
-    }
-    const [item, setItem] = useState({})
-    useEffect(() => {
-        getItem().then(item => setItem(item))
-    })
+    // const hacerCosas = () => {
+    //     alert ("Hacer Cosas")
+    // }
     return (
         <div>
-            <NavBar />
-            <CartWidget mostrarMensaje={mostrarAlerta} />
-            <Producto mostrarMensaje={mostrarAlerta} />
-            <ItemListContainer />
-            <ItemDetailContainer item = {item} />
+            <Router />
+            {/* <ItemListContainer /> */}
+            {/* <ItemDetailContainer producto = {item} /> */}
             {/* <div>
                 <Api />
             </div> */}
+            {/* <Event/> */}
+            {/* <Mascara /> */}
+            {/* <Hijo hacerCosas={hacerCosas}/> */}
         </div>
         
     )

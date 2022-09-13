@@ -1,19 +1,18 @@
 import React from 'react'
-import ItemCount from './ItemCount'
 import mouse from "../assets/mouse.png"
 
-const ItemDetail = ({item}) => {
-    <div className = "detailedInfo">
+const ItemDetail = ({ producto }) => {
 
-        <div>
-            <h2>Información detallada</h2>
-            <p className = "itemTitle">{item.nombre}</p>
-            <img src = {mouse} alt = ""/>
-            <p className = "descripcion">{item.descripcion}</p>
-            <ItemCount stock = {item.stock}/>
+    return (
+        <div className="detailedInfo">
+            <img src={mouse} alt="foto" />
+            <ul>
+            <li className="itemTitle">{producto.nombre}</li>
+            <li>{producto.precio}</li>
+            <li >{producto.stock}</li>
+            <li className="descripcion">{producto.descripcion}</li>
+            </ul>
         </div>
-    </div>
-    // console.log(item.descripcion)
+            )
 }
-
 export default ItemDetail

@@ -47,3 +47,10 @@ ul a{
     flex-direction: row;
 }
 
+img{
+    width: 300px
+}
+
+.detailedInfo{
+    margin-left: 50px;
+}

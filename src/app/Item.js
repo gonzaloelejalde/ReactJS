@@ -31,7 +31,7 @@ export const getItem = () => new Promise ((resolve, reject) => {
         {
             id: 1,
             nombre: "Mouse",
-            precio: 5000,
+            precio: "$5000",
             stock: 5,
             imagen: {mouse},
             descripcion: "Mouse marca RedDragon"

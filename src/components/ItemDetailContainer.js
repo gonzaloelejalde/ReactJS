@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import { getItem} from '../app/Item'
+import {getItem} from '../app/Item'
 import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
     }, [])
 
     return (
-        <ItemDetail item = {product} />
+        <ItemDetail producto = {product} />
     )
 }
 

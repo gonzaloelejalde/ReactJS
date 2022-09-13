@@ -10,7 +10,6 @@ const ItemCount = ({stock = 5, cuentaInicial = 0, onAdd}) => {
         setContador(cuentaInicial)
         console.log("No existe")
     }
-    
     return (
     <div>
         Stock: {stock} 
@@ -20,10 +19,9 @@ const ItemCount = ({stock = 5, cuentaInicial = 0, onAdd}) => {
         {contador}
 
         <button onClick = {() => setContador(contador + 1)} className = "sumaresta"> + </button>
-        <button onClick = {() => onAdd(contador)} className = "sumaresta">Agregar al Carrito</button>
-
         
     </div>
+    
     )
 }
 

@@ -22,8 +22,7 @@ const ItemList = () => {
                             <img src={mouse} alt = ""/>
                             <div className="card-body">
                                 <h4 className="card-title">{p.map(producto => <p>{producto.nombre}</p>)}</h4>
-                                <p className="card-text text-secondary">{p.map(producto => <p>${producto.precio}</p>)}</p>
-                                <ItemCount onAdd = {(contador) => console.log(contador)}/>
+                                <ItemCount onAdd = {(contador) => console.log(contador)} />
                             </div>
                         </div>
                     </div>

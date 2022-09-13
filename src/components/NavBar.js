@@ -1,4 +1,5 @@
 import foto from "../assets/logo.png"
+import { Link } from "react-router-dom"
 
 const NavBar = () => {
     return (
@@ -9,13 +10,19 @@ const NavBar = () => {
             </div>
             <div className="Navbar">
                 <ul>
-                    <li><a href=".">Inicio</a></li>
+                    <li><Link to = "/">Inicio</Link></li>
                 </ul>
                 <ul>
-                    <li><a href=".">Productos</a></li>
+                    <li><Link to ="/product/">Productos</Link></li>
                 </ul>
                 <ul>
-                    <li><a href=".">Contacto</a></li>
+                    <li><Link to ="/detail/">Detalles de los Productos</Link></li>
+                </ul>
+                <ul>
+                    <li><Link to = "/cart/">Carrito</Link></li>
+                </ul>
+                <ul>
+                    <li><Link to = "/contact/">Contacto</Link></li>
                 </ul>
             </div>
         </div>
