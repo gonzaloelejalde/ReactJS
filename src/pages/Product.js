@@ -5,11 +5,14 @@ import CartWidget from "../components/CartWidget"
 import Producto from "../components/Producto"
 
 const Product = () => {
+    const mostrarMensaje = (() => {
+        alert ("Carrito")
+    })
     return (
         <div>
             <NavBar />
             <CartWidget />
-            <Producto />
+            <Producto mostrarMensaje={mostrarMensaje}/>
             <ItemListContainer />
         </div>
     )

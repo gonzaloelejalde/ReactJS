@@ -1,10 +1,10 @@
 import React from "react"
 
-const Producto = ( {children}) => {
+const Producto = ( {mostrarMensaje, children}) => {
     return(
         <div>
             <p>{children}</p>
-            <button className = "añadir">Añadir al carrito</button>
+            <button onClick = {mostrarMensaje} className = "añadir">Añadir al carrito</button>
         </div>
     )
 }
