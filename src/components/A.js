@@ -1,17 +1,26 @@
-import React, { useState } from 'react'
+import { useContext } from 'react'
+import { AppContext } from '../app/Provider'
 
-const A = () => {
-    const [miEstado, setMiEstado] = useState(0);
-    const [miEstado2, setMiEstado2] = useState(0);
 
-    return (
+const A = ({}) => {
+    const [state, setState] = useContext(AppContext)
+    // const [miEstado, setMiEstado] = useState(0);
+    // const [miEstado2, setMiEstado2] = useState(0);
+
+    // return (
+    //     <>
+    //         <div class = "sumaresta">
+    //         <p>Contador</p>
+    //         <button onClick={() => setMiEstado(miEstado - 1)}> - </button>
+    //         <p>{miEstado + miEstado2}</p>
+    //         <button onClick={() => setMiEstado2(miEstado2 + 1)}> + </button>
+    //         </div>
+    //     </>
+    // )
+    return(
         <>
-            <div class = "sumaresta">
-            <p>Contador</p>
-            <button onClick={() => setMiEstado(miEstado - 1)}> - </button>
-            <p>{miEstado + miEstado2}</p>
-            <button onClick={() => setMiEstado2(miEstado2 + 1)}> + </button>
-            </div>
+            <input type = "text"  onChange = {(e) => setState({...state, a: e.target.value})}/>
+            <input type = "text"  onChange = {(e) => setState({...state, b: e.target.value})}/>
         </>
     )
 }

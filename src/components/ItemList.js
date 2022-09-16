@@ -1,35 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import { getProductos } from '../app/Item.js'
-import ItemCount from './ItemCount'
-import mouse from "../assets/mouse.png"
+import React from 'react'
+import Item from "./Item"
 
-const ItemList = () => {
-    const [p, setP] = useState([])
-    useEffect(() => {
-        const getInfo = async () => {
-            const items = await getProductos()
-            console.log(items)
-            setP(items)
-        }
-        getInfo()
-    }, [])
+
+const ItemList = ({props}) => {
     return (
-            <div className = "cartas">
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-4">
-                        <div className="card">
-                            <img src={mouse} alt = ""/>
-                            <div className="card-body">
-                                <h4 className="card-title">{p.map(producto => <p>{producto.nombre}</p>)}</h4>
-                                <ItemCount onAdd = {(contador) => console.log(contador)} />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-    )
+        <div className='wrap'>
+            {props.map((item) => {
+                return <Item key = {item.id} image = {item.image} title = {item.title} price = {item.price}/>
+            })}
+        </div>
+    ) 
 } 
 
 export default ItemList

@@ -7,8 +7,8 @@ const ItemDetail = ({ producto }) => {
         <div className="detailedInfo">
             <img src={mouse} alt="foto" />
             <ul>
-            <li className="itemTitle">{producto.nombre}</li>
-            <li>{producto.precio}</li>
+            <li className="itemTitle">{producto.title}</li>
+            <li>{producto.price}</li>
             <li >{producto.stock}</li>
             <li className="descripcion">{producto.descripcion}</li>
             </ul>

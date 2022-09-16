@@ -44,7 +44,8 @@ ul a{
 
 .cartas{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px 0px 15px 200px
 }
 
 img{
@@ -53,4 +54,14 @@ img{
 
 .detailedInfo{
     margin-left: 50px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
 }

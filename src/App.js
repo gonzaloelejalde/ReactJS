@@ -3,6 +3,9 @@ import  Router  from "./app/Router";
 // import Event from "./components/Event"
 // import Mascara from "./components/Mascara"
 // import Hijo from "./components/Hijo"
+// import A from "./components/A";
+// import B from "./components/B";
+// import Provider from "./app/Provider";
 
 
 
@@ -22,6 +25,10 @@ const App = () => {
             {/* <Event/> */}
             {/* <Mascara /> */}
             {/* <Hijo hacerCosas={hacerCosas}/> */}
+            {/* <Provider>
+                <A/>
+                <B/>
+            </Provider> */}
         </div>
         
     )
