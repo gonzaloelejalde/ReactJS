@@ -48,7 +48,7 @@ import { useState } from "react"
 
 const ItemDetail = ( data ) => {
     const [carrito, setCarrito] = useState(false)
-    const onAdd = () =>{
+    const onAdd = (q) =>{
         setCarrito(true)
     }
     return (
