@@ -4,14 +4,14 @@ import auricular from "./assets/auricular.png"
 import mousepad from "./assets/mousepad.png"
 import monitor from "./assets/monitor.png"
 
-export const productos = [
+const productos = [
     {
         id: 1,
         title: "Mouse",
         price: 5000,
         stock: 5,
         image: mouse,
-        descripcion: "Mouse marca RedDragon",
+        description: "Mouse marca RedDragon",
     },
     {
         id: 2,
@@ -51,3 +51,4 @@ export const productos = [
     }
 ]
 
+export default productos

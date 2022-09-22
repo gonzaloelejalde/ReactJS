@@ -45,31 +45,49 @@ import React from "react"
 import ItemCount from "./ItemCount"
 import {Link} from "react-router-dom"
 import { useState } from "react"
+import productos from "../Producto"
+// import mouse from "../assets/mouse.png"
 
-const ItemDetail = ( data ) => {
-    const [carrito, setCarrito] = useState(false)
+// class Producto {
+//     constructor(id, title, price, stock, image, description){
+//         this.id = id
+//         this.title = title
+//         this.price = price
+//         this.stock = stock
+//         this.image = image
+//         this.description = description
+//     }
+// }
+
+// const producto1 = new Producto(1, "Mouse", 5000, 5, mouse, "Mouse marca RedDragon")
+
+
+const ItemDetail = () => {
+    const [setCarrito] = useState(false)
     const onAdd = (q) =>{
         setCarrito(true)
+        console.log(`Añadiste ${q} cantidades al carrito`)
     }
     return (
         <>
             <div className='cardDetail'>
-                <h1><strong> {data.title}</strong></h1>
-                <img className='imgLego' src={data.image} alt={data.title} />
-                <h2>Precio: ${data.price}</h2>
-                <p className='description'>Descripción: {data.description}</p>
-                {
-                    carrito
-                    ?<Link to = "/cart/">Terminar compra</Link>
-                    :<ItemCount stock = {data.stock} onAdd = {onAdd} initial = {0}/>
-                }
+                <h1><strong> {productos.title} </strong></h1>
+                <img className='imgLego' src={productos.image} alt= "fto" />
+                <h2>Precio: ${productos.price}</h2>
+                <p className='description'>Descripción: {productos.description}</p>
+
+                
+                <ItemCount stock = {productos.stock} onAdd = {onAdd} initial = {0}/>
+
             </div>
             <Link to = {"/"}>
                 <button className = "btn btn-dark">
                     Volver
                 </button>
+                <Link to = {"/cart/"}><button className = "btn btn-dark"> Terminar compra </button></Link>
             </Link>
         </>
+        
     )
 }
 

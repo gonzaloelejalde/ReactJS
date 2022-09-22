@@ -4,6 +4,7 @@ import Contact from "../pages/Contact"
 import Product from "../pages/Product"
 import Cart from "../pages/Cart"
 import ItemDetailContainer from "../components/ItemDetailContainer"
+import React from "react"
 
 
 const Router = () => (
