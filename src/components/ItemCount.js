@@ -12,9 +12,6 @@ const ItemCount = ({stock = 5, initial = 0, onAdd}) => {
         setCant(cant + 1);
         setQuantity(quantity - 1)
     }
-    onAdd = (cant) => {
-        alert(`Se agregaron ${cant} a tu carrito`)
-    }
     return (
     <div>
         <button onClick = {
@@ -28,7 +25,6 @@ const ItemCount = ({stock = 5, initial = 0, onAdd}) => {
         disabled = {cant === stock} >
             +
         </button>
-        <button variant = "success" onClick = {() => onAdd(cant)}>Agregar al carrito</button>
         <p>Stock disponible: {quantity}</p>
     </div>
     

@@ -1,13 +1,14 @@
-import React from "react"
+import React, { useContext } from "react"
 import ItemCount from "./ItemCount"
 import {Link} from "react-router-dom"
 import { useState } from "react"
+import { CartContext } from "./Carrito"
 
 const ItemDetail = ({details}) => {
-    const [setCarrito] = useState(false)
+    const {agregarAlCarrito} = useContext(CartContext)
+    const [data, setData] = useState([])
     const onAdd = (q) =>{
-        setCarrito(true)
-        console.log(`Añadiste ${q} cantidades al carrito`)
+        setData(q)
     }
     return (
         <>
@@ -27,7 +28,7 @@ const ItemDetail = ({details}) => {
                 
             </Link>
             <div className="terminar">
-            <Link to = {"/cart/"}><button className = "btn btn-dark"> Terminar compra </button></Link>
+            <button className = "btn btn-dark" onClick = {() => agregarAlCarrito(data[0])}>Agregar al Carrito</button>
             </div>
             </div>
             

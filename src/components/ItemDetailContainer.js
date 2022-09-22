@@ -3,6 +3,7 @@ import {useEffect, useState} from 'react'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
 import  productos  from '../Producto'
+import NavBar from "./NavBar"
 
 const ItemDetailContainer = () => {
 
@@ -18,6 +19,7 @@ const ItemDetailContainer = () => {
     }, [itemId])
     return (
         <>
+            <NavBar/>
             <ItemDetail details = {details} />
         </>
     )

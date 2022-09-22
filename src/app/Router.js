@@ -5,9 +5,11 @@ import Product from "../pages/Product"
 import Cart from "../pages/Cart"
 import ItemDetailContainer from "../components/ItemDetailContainer"
 import React from "react"
+import { CartProvider } from "../components/Carrito"
 
 
 const Router = () => (
+    <CartProvider>
     <BrowserRouter>
         <Routes>
             <Route index element = {<Home/>} />
@@ -18,6 +20,7 @@ const Router = () => (
             <Route path = "/item/:itemId" element = {<ItemDetailContainer/>}/>
         </Routes>
     </BrowserRouter>
+    </CartProvider>
 )
 
 export default Router
