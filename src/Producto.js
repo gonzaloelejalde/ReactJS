@@ -8,7 +8,7 @@ const productos = [
     {
         id: 1,
         title: "Mouse",
-        price: 5000,
+        price: "5000",
         stock: 5,
         image: mouse,
         description: "Mouse marca RedDragon",
@@ -16,38 +16,42 @@ const productos = [
     {
         id: 2,
         title: "Teclado",
-        price: 7000,
+        price: "7000",
         stock: 5,
         image: teclado,
-        descripcion: "Teclado marca RedDragon"
+        description: "Teclado marca RedDragon"
     },
     {
         id: 3,
         title: "Auricular",
-        price: 10000,
+        price: "10000",
         stock: 5,
-        image: auricular
+        image: auricular,
+        description: "Auricular marca Logitech"
     },
     {
         id: 4,
         title: "Mousepad",
-        price: 3000,
+        price: "3000",
         stock: 5,
-        image: mousepad
+        image: mousepad,
+        description: "Mousepad marca HyperX"
     },
     {
         id: 5,
         title: "Monitor",
-        price: 30000,
+        price: "30000",
         stock: 5,
-        image: monitor
+        image: monitor,
+        description: "Monitor marca Samsung"
     },
     {
         id: 6,
         title: "Micrófono",
-        price: 17000,
+        price: "17000",
         stock: 5,
-        image: "https://www.venex.com.ar/products_images/1604518019_hxproductquadcasts1zmlg.jpg"
+        image: "https://www.venex.com.ar/products_images/1604518019_hxproductquadcasts1zmlg.jpg",
+        description: "Micrófono de HyperX"
     }
 ]
 

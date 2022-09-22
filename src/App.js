@@ -1,56 +1,46 @@
 import "./app/styles.css";
 import  Router  from "./app/Router";
-// import Renderizados from "./components/Renderizados";
-// import RenderizadosB from "./components/RenderizadosB";
 // import { useState } from "react";
-// import Event from "./components/Event"
-// import Mascara from "./components/Mascara"
-// import Hijo from "./components/Hijo"
-// import A from "./components/A";
-// import B from "./components/B";
-// import Provider from "./app/Provider";
-
-
-
+// import { createItem , getItems, deleteItem, updateItem} from "./app/api";
+// import { useEffect } from "react";
 
 const App = () => {
-    // const hacerCosas = () => {
-    //     alert ("Hacer Cosas")
-    // }
-    // const [loading, setLoading] = useState(true)
+    // const[productName, setProductName] = useState()
+    // const[productoId, setProductoId] = useState()
+    // const [productos, setProductos] = useState()
+        
+    // useEffect(() => {
+    //     getItems().then (res => setProductos(res))
+    // }, [])
+
+
     return (
         <div>
-{/*             
-            <button onClick = {() => setLoading(!loading)}>Pulsar</button>
-            {
-                loading ? <p>Loading</p> : <p>Loaded</p> //Con esto no se ve si es false
-            } */}
             <Router />
-            {/* <ItemListContainer /> */}
-            {/* <ItemDetailContainer producto = {item} /> */}
-            {/* <div>
-                <Api />
-            </div> */}
-            {/* <Event/> */}
-            {/* <Mascara /> */}
-            {/* <Hijo hacerCosas={hacerCosas}/> */}
-            {/* <Provider>
-                <A/>
-                <B/>
-            </Provider> */}
+            {/* <input type ="text" onChange={e => setProductName(e.target.value)}/>
+            <button onClick={async ()=> {
+                await createItem({title: productName})
+                getItems()
+            }}>Save product</button>
+
+            <input type ="text" onChange={e => setProductoId(e.target.value)}/> 
+
+            <button onClick={async ()=> {
+                await deleteItem(productoId)
+                getItems()
+            }}>Delete product</button>
+
+            <button onClick={async ()=> {
+                await updateItem(productoId, {title:productName})
+                getItems()
+            }}>Update product</button>
+
+            {
+                productos && productos.map(producto => <p>{producto.id} - {producto.title}</p>)
+            } */}
         </div>
         
     )
 
 }
 export default App
-
-
-// {/* 
-// const [seVeA, setseVeA] = useState(true)
-//     return (
-//         <div>
-//             <button onClick = {() => setseVeA(!seVeA)}>Pulsar</button>
-//             {
-//                 seVeA && <Renderizados/> //Con esto no se ve si es false
-//             } */}

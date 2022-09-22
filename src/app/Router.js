@@ -15,7 +15,7 @@ const Router = () => (
             {/*En path escribimos lo que el usuario esribira en la url*/}
             <Route path = "/product/" element = {<Product/>} />
             <Route path = "/cart/" element = {<Cart/>}/>
-            <Route path = "/item/:id" element = {<ItemDetailContainer/>}/>
+            <Route path = "/item/:itemId" element = {<ItemDetailContainer/>}/>
         </Routes>
     </BrowserRouter>
 )
