@@ -3,9 +3,9 @@ import Home from "../pages/Home" //Son ejemplos
 import Contact from "../pages/Contact"
 import Product from "../pages/Product"
 import Cart from "../pages/Cart"
-import ItemDetailContainer from "../components/ItemDetailContainer"
+import ItemDetailContainer from "../components/ItemDetail/ItemDetailContainer"
 import React from "react"
-import { CartProvider } from "../components/Carrito"
+import { CartProvider } from "../components/Cart/Carrito"
 
 
 const Router = () => (

@@ -2,8 +2,8 @@ import React from "react"
 import {useEffect, useState} from 'react'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
-import  productos  from '../Producto'
-import NavBar from "./NavBar"
+import  productos  from '../../Producto'
+import NavBar from "../NavBar/NavBar"
 
 const ItemDetailContainer = () => {
 

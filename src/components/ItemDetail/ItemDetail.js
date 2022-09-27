@@ -1,8 +1,8 @@
 import React, { useContext } from "react"
-import ItemCount from "./ItemCount"
+import ItemCount from "../ItemCount"
 import {Link} from "react-router-dom"
 import { useState } from "react"
-import { CartContext } from "./Carrito"
+import { CartContext } from "../Cart/Carrito"
 
 const ItemDetail = ({details}) => {
     const {agregarAlCarrito} = useContext(CartContext)

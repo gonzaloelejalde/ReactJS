@@ -1,5 +1,5 @@
 import React from 'react'
-import fotocarrito from "../assets/carrito-de-compras.png"
+import fotocarrito from "../../assets/carrito-de-compras.png"
 
 const CartWidget = ({mostrarMensaje}) => {
 return (
