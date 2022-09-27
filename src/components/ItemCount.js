@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-const ItemCount = ({stock = 5, initial = 0, onAdd}) => {
+const ItemCount = ({stock = 5, initial = 1, onAdd}) => {
     const [cant, setCant] = useState (0)
     const [quantity, setQuantity] = React.useState(stock)
     const decrease = () => {
@@ -26,6 +26,8 @@ const ItemCount = ({stock = 5, initial = 0, onAdd}) => {
             +
         </button>
         <p>Stock disponible: {quantity}</p>
+
+        <button onClick = {() => {onAdd(cant)}}>Comprar</button>
     </div>
     
     )

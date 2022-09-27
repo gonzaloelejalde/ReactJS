@@ -1,15 +1,14 @@
-import React, { useContext } from "react"
+import React from "react"
 import ItemCount from "../ItemCount"
 import {Link} from "react-router-dom"
-import { useState } from "react"
-import { CartContext } from "../Cart/Carrito"
+import { useCartContext } from "../Cart/CartContext"
 
 const ItemDetail = ({details}) => {
-    const {agregarAlCarrito} = useContext(CartContext)
-    const [data, setData] = useState([])
-    const onAdd = (q) =>{
-        setData(q)
+    const {addToCart} = useCartContext()
+    const onAdd = (quantity) =>{
+        addToCart(details, quantity)
     }
+    
     return (
         <>
             <div className='cardDetail'>
@@ -17,7 +16,7 @@ const ItemDetail = ({details}) => {
                 <img className='imgLego' src={details.image} alt= "fto" />
                 <h2>Precio: ${details.price}</h2>
                 <p className='description'>Descripción: {details.description}</p>
-                <ItemCount stock = {5} onAdd = {onAdd}/>
+                <ItemCount stock = {5} initial = {1} onAdd = {onAdd}/>
             </div>
             
             <div className="botonDetail">
@@ -27,9 +26,6 @@ const ItemDetail = ({details}) => {
                 </button>
                 
             </Link>
-            <div className="terminar">
-            <button className = "btn btn-dark" onClick = {() => agregarAlCarrito(data[0])}>Agregar al Carrito</button>
-            </div>
             </div>
             
         </>

@@ -1,7 +1,9 @@
 import foto from "../../assets/logo.png"
 import { Link } from "react-router-dom"
+import { useCartContext } from "../Cart/CartContext"
 
 const NavBar = () => {
+    const {totalQty, totalPrice, cart} = useCartContext()
     return (
         <div>
             <div>
@@ -22,6 +24,9 @@ const NavBar = () => {
                     <li><Link to = "/contact/">Contacto</Link></li>
                 </ul>
             </div>
+            {cart.length > 0 ? <div><p>Cantidad de Productos: {totalQty}</p>
+            <p>Precio Total: ${totalPrice}</p></div>
+            : "No hay Items"}
         </div>
     )
 }
