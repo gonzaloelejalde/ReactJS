@@ -24,13 +24,13 @@ const ItemDetail = ({details}) => {
 
             {
                 cuenta
-                ? <Link to = "/cart/">Terminar Compra</Link>
+                ? <Link to = "/cart/" className="terminar">Terminar Compra</Link>
                 : <ItemCount stock = {5} initial = {1} onAdd = {onAdd}/>
             }
             
             <div className="botonDetail">
             <Link to = {"/product/"}>
-                <button className = "btn btn-dark">
+                <button className = "volver">
                     Volver
                 </button>
                 

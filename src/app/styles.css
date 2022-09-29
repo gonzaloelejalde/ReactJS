@@ -79,3 +79,23 @@ img{
 .terminar{
     margin-left: 5px;
 }
+
+.btn-dark{
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.count{
+    margin-left: 15px;
+}
+
+.volver{
+    margin-right: 60px;
+    margin-top: 15px;
+    color: white;
+    background-color: black
+}
+
+.terminar{
+    margin-left: 15px;
+}

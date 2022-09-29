@@ -13,7 +13,7 @@ const ItemCount = ({stock = 5, initial = 1, onAdd}) => {
         setQuantity(quantity - 1)
     }
     return (
-    <div>
+    <div className = "count">
         <button onClick = {
             () => { decrease()}}
             disabled = {cant === initial}
@@ -27,7 +27,7 @@ const ItemCount = ({stock = 5, initial = 1, onAdd}) => {
         </button>
         <p>Stock disponible: {quantity}</p>
 
-        <button onClick = {() => {onAdd(cant)}}>Comprar</button>
+        <button onClick = {() => {onAdd(cant)}} className = "btn btn-dark">Comprar</button>
     </div>
     
     )
