@@ -91,11 +91,14 @@ img{
 
 .volver{
     margin-right: 60px;
-    margin-top: 15px;
     color: white;
     background-color: black
 }
 
 .terminar{
+    margin-left: 15px;
+}
+
+.carrito{
     margin-left: 15px;
 }

@@ -3,6 +3,7 @@ import teclado from "./assets/teclado.png"
 import auricular from "./assets/auricular.png"
 import mousepad from "./assets/mousepad.png"
 import monitor from "./assets/monitor.png"
+import microfono from "./assets/microfono.jpg"
 
 const productos = [
     {
@@ -50,7 +51,7 @@ const productos = [
         title: "Micrófono",
         price: "17000",
         stock: 5,
-        image: "https://www.venex.com.ar/products_images/1604518019_hxproductquadcasts1zmlg.jpg",
+        image: microfono,
         description: "Micrófono de HyperX"
     }
 ]

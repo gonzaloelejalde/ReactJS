@@ -2,21 +2,19 @@ import React from "react"
 import {useEffect, useState} from 'react'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
-import  productos  from '../../Producto'
 import NavBar from "../NavBar/NavBar"
+import { getFirestore, doc, getDoc } from "firebase/firestore"
 
 const ItemDetailContainer = () => {
-
     const [details, setDetails] = useState({})
     const {itemId} = useParams()
 
     useEffect(() =>{
-        const getDetails = new Promise((resolve, reject) => {
-                resolve(productos)
-            }
-        )
-        getDetails.then(res => setDetails(res.find(productos => Number(productos.id) === Number(itemId))))
-    }, [itemId])
+        const recuperarItem = getFirestore()
+        const recuperarDoc = doc(recuperarItem, "productos", itemId)
+        getDoc(recuperarDoc)
+        .then(res => setDetails({id: res.id,...res.data()}))
+    },[itemId])
     return (
         <>
             <NavBar/>

@@ -4,16 +4,21 @@ import { useCartContext } from '../components/Cart/CartContext'
 
 
 const Cart = () => {
-    const {cart, deleteProduct, totalPrice, totalQty} = useCartContext()
+    const {cart, deleteProduct, totalPrice, totalQty, cleanProduct} = useCartContext()
     return (
         <div>
             <NavBar/>
+            <div  className='carrito'>
             <p>Este es el Carrito</p>
             {cart.length > 0 ? <div><p>Cantidad de Productos: {totalQty}</p>
             <p>Precio Total: ${totalPrice}</p></div>
             : "No hay Items"}
+            <>
+
+            </>
+            </div>
             {cart.length > 0 ? (
-                <div className='carrito'>
+                <div>
                 <ul>
                     {cart.map((item, index) => {
                         return(<li key = {index}>
@@ -28,6 +33,8 @@ const Cart = () => {
                 </ul>
                 </div>
             ) : <></>}
+
+            <button onClick={() => cleanProduct()} className = "btn btn-dark">Limpiar Carrito</button>
             
         </div>
     )
