@@ -1,24 +1,8 @@
-// import { initializeApp } from 'firebase/app';
-// import { getFirestore } from 'firebase/firestore';
-// import { getAuth, setPersistence, browserLocalPersistence } from 'firebase/auth';
-
-// const firebaseConfig = {
-//     apiKey: process.env.REACT_APP_API_KEY,
-//     authDomain: process.env.REACT_APP_PROJECT_ID + '.firebaseapp.com',
-//     projectId: process.env.REACT_APP_PROJECT_ID,
-//     storageBucket: process.env.REACT_APP_PROJECT_ID + ".appspot.com",
-// };
-
-// const firebaseApp = initializeApp(firebaseConfig);
-// export const db = getFirestore();
-// export const auth = getAuth(firebaseApp);
-
-// // Si descomentas la siguiente línea, cuando mientras que el usuario no se desloguee expresamente o cierre el navegador, permanecerá logueado y podremos acceder a su id desde cualquier página
-// setPersistence(auth, browserLocalPersistence);
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import {getFirestore} from "firebase/firestore"
+import {getStorage} from "firebase/storage"
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -36,4 +20,5 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+export const db = getFirestore(app)
+export const storage = getStorage(app)

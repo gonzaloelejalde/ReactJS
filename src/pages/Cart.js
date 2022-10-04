@@ -34,7 +34,7 @@ const Cart = () => {
                 </div>
             ) : <></>}
 
-            <button onClick={() => cleanProduct()} className = "btn btn-dark">Limpiar Carrito</button>
+            <button onClick={() => cleanProduct(console.log("Compra Realizada"))} className = "btn btn-dark">Comprar</button>
             
         </div>
     )
