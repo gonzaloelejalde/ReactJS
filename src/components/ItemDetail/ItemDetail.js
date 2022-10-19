@@ -24,7 +24,7 @@ const ItemDetail = ({details}) => {
 
             {
                 cuenta
-                ? <Link to = "/cart/" className="terminar">Terminar Compra</Link>
+                ? <Link to = "/index/" className="terminar">Terminar Compra</Link>
                 : <ItemCount stock = {5} initial = {1} onAdd = {onAdd}/>
             }
             

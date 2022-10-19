@@ -13,7 +13,7 @@ const Router = () => (
     <CartProvider>
     <BrowserRouter>
         <Routes>
-            <Route index element = {<Home/>} />
+            <Route path = "/index/" element = {<Home/>} />
             <Route path = "/contact/" element = {<Contact/>} />
             {/*En path escribimos lo que el usuario esribira en la url*/}
             <Route path = "/product/" element = {<Product/>} />
